@@ -156,3 +156,27 @@ a character constant, although it is just another way to write a small integer. 
 1.5.4 Word Counting
 
 >> see count-words.c
+
+1.6 Arrays
+
+Count number of occurences of each digit or white space character (blank, tab, newline).
+
+There are TWELVE categories of input, so it is convenient to use an array to hold the number of occurrences of each digit, rather than a ten indivcidual varaibles.
+
+>> see array.c
+
+int ndigit[10];
+
+declares ndigit to be an array of 10 integers. Array subscripts always start at zero in C, so the elements are ndigit[0], [1], .. [9].
+
+A subscript can be any integer expression, which includes integer variables like i, and integer constants.
+
+This particular program relies on properties of the character representation of digits.
+
+c >= '0' && c <= '9'
+
+determines whether the character in C is a digit. If it is, the NUMERIC value of that digit is:
+
+c - '0'
+
+Characters are just small integers.
