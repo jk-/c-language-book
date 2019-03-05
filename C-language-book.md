@@ -180,3 +180,52 @@ determines whether the character in C is a digit. If it is, the NUMERIC value of
 c - '0'
 
 Characters are just small integers.
+
+1.7 Functions
+
+A function is equivalent to a subroutine in Fortran.
+
+>> see power.c
+
+A function def has this form:
+
+<return type> <function-name>(<parameter delcarations>)
+{
+    <declarations>
+    <statements>
+}
+
+Function definitions can appear in any order, and in one source file or several.
+
+We are assuming that both functions are in the same file.
+
+int power(int base, int n);
+
+declares the paramter types and names, and the type of the result that the function returns. The names used by the power for its parameters are local to power.
+
+PARAMETER: a varaible named in the parenthesized list in a function def
+
+ARGUMENTT: value used in theh call of the function
+
+A return value of 0 implies normal termination.
+Non-zero values signal unsual or erroneous termination conditions.
+
+int power(int m, int n);
+
+This is called a FUNCTION PROTOTYPE, an error occurs if the definition of a function or any uses of it do not agree with its prototype.
+
+parameter names need not agree. indeed, parameter names are optimal in a functional protype, so for the prototype we could have written:
+
+int power(int, int);
+
+ANSI C and earlier versions is how functions are declared and defined. In original definition C, the pwoer function would have been wrriten like so:
+
+power(base, n)
+int base, n;
+{
+    <statements>
+}
+
+int power();
+
+No parameter list was permitted, so the compiler could not readily check that the power was being caleld correctly. Ineed, since by defaul;t the power would have been assumed ot return int, the entire delation might well have been ommitted.
