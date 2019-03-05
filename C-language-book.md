@@ -281,3 +281,87 @@ extern declarations of variables and functions in a separate file, historically 
 
 DEFINTION: regers to the place where the variable is created or assigned storage
 DELCARATION: refers to the place where the nature of the variaable is sttaated but no storage is allocated.
+
+
+CHAPTER 2.0: Types, Operators, and Expressions
+
+signed, unsigned
+
+char, int, float, double
+
+can be assigned with
+short int sh;
+long int counter;
+
+int can be omitted in such dec
+
+short is often 16 bits and long is 32
+and int either 16 or 32 bit.
+
+Each compiler is free to choose sizes for its own harderware.
+
+chars - 8 bbits
+unsigned char values between 0 and 255
+
+signed chars between -128 and 127
+
+The standard headers:
+
+<limits.h> and <float.h> contain symbolic constants for all of these types (long double, etc)
+
+1234 = int
+123456789L = long constant (note L)
+
+unsigned constants are written with U and suffix of ul or UL inicates unsigned long
+
+the suffix f or F indicates a float constant
+l or L indicate long double
+
+A leading 0 (zero) on an integer constant means octal.
+
+A leading 0x means hex.
+
+DEC 31 == 037 in octal
+and 0x1f in hex.
+
+Character constant is an INTEGER
+
+Written: 'x'. the value of a character constant is the numeric value of the character in the machines' character set.
+
+ASSIC character set constnat '0' has the value 48, which is unrealted to the numeric value of 0.
+
+Certain chars can be represented in character and string constants  by escape seq \n (even though it uses two characters).
+
+Arbitrary byte-sized bit pattern can be specified by:
+
+'\ooo'
+
+where ooo is one to three octal digits or by
+
+'xhh'
+
+where hh is one or more hexadeciaml digits.
+
+#define VTAB '\013' /* ASCII vertical tab \*/
+#define BELL '\077' /* ASCII bell character \*/
+
+Or in hex
+
+#define VTAB '\xb'
+#define BELL '\x7'
+
+Constant expression
+#define MAXLINE 1000
+
+String constant:
+"I am a string"
+
+"hello," "world" == "hello, world"
+
+strlen(s) returns the length of its character string arguments s, excluding the terminal '\0' see: <string.h>
+
+Enumeration constant:
+
+enum boolean {NO, YES};
+
+Alternative to define, but the values are determined for you (1,2,..,n)
