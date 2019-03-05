@@ -50,5 +50,29 @@ also arrays, structures and unions of these basic types, pointers to them and fu
 
 There are problems in our FAHR.c. Because we used ints
 our arithmetic is not accurate. Let's change that.
+>> see fahr.c git log -1
 
->>
+We were unable to use int's for celsius becuase the values would be truncated to zero.
+
+in the while loop and assignmentt of fahr to lower tthe int is converted to float before the opartion is done.
+
+the print F %3.0f says that a floating-poiont number is to be printed at least three characters "wide" with no decimal point and no fraction digits.
+
+%6.1f describes another number (celsius) that is to be printed at least six characters wide with 1 digit after decimal point.
+
+%d  print as decimal integer
+%6d print as decimal integer, at least 6 characters wide
+%f  print as float
+%6f 6-wide float
+%.2f    print as float, 2 characters after decimal
+%6.2f   6 wide, 2 wide decimal
+%o      for octal
+%x      for hex
+%c      for charactter
+%s      string
+%%      for %
+
+
+1.3 The for statement
+
+There are other ways to wirte the fahr program
