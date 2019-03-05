@@ -76,3 +76,12 @@ the print F %3.0f says that a floating-poiont number is to be printed at least t
 1.3 The for statement
 
 There are other ways to wirte the fahr program
+
+
+1.4 Symbolic Constants
+
+It's bad practice to bury constants inside the program. Here we will define constantts to our fahr program. To do so we use:
+
+#define <name> <replacement text>
+
+Any occurrence of name (not in quoets and nott part of another name) will be replaced by the corresponding replacement ttetxt.
