@@ -420,3 +420,25 @@ A way to tell the compiler thatt a virable will be used often.
 C is not a block-stuctured language because functions cannot be defined within other functions (aka python).
 
 Variables however, are block structured.
+
+4.9 Initialization
+
+external and static variables are guranteed to be init to zero.
+automattic and register variables have undefined initial values (ie. garbage)
+scalar variables are defined on assignment
+
+external and static variables is done once before program begins execution. automatic and register variables are done each time the function is entered.
+
+When an array ommits its size the compiler will compute the length by counting the inittializers, of which are there are 12 in this case.
+
+int days[] = { 1, 2, 3, ... , 12};
+
+If fewer intializers for an array than the number specified than the missing elements will be zero for external, static and automatic variables.
+
+Char arrays are special. A string may be used instead of commans.
+
+char pattern[] = "ould";
+
+shorthand for:
+
+char pattern[] = { 'o', 'u', 'l', 'd', '\0'};
