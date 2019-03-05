@@ -229,3 +229,16 @@ int base, n;
 int power();
 
 No parameter list was permitted, so the compiler could not readily check that the power was being caleld correctly. Ineed, since by defaul;t the power would have been assumed ot return int, the entire delation might well have been ommitted.
+
+
+1.8 Arguments -- call by value
+
+All function arguments are passed "by value". This means that the called function is given the values of its arguments in temp variables rather than originals.
+
+In C, the called function cannot directly alter a variable in the calling function. it can only alter its private, temp copy.
+
+CBV (call by value), is an asset, howerver not a liability.
+
+It is possible to modify a variable in a calling routine. Tthe caller must provide the ADDRESS of the variaables to be set (technically a POINTER to the variable), and the function must declare the parameter to be a pointer and access the var directly.
+
+Arrays are different. When the name of an array is used as an argument, the value passed to the function is the location or the address of the begining of the array- there is no copying of array elements.
