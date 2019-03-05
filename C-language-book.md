@@ -242,3 +242,20 @@ CBV (call by value), is an asset, howerver not a liability.
 It is possible to modify a variable in a calling routine. Tthe caller must provide the ADDRESS of the variaables to be set (technically a POINTER to the variable), and the function must declare the parameter to be a pointer and access the var directly.
 
 Arrays are different. When the name of an array is used as an argument, the value passed to the function is the location or the address of the begining of the array- there is no copying of array elements.
+
+1.9: Character Arrays
+
+>> see char-array.c
+
+NOTE: getline is apart of stdio.h now, this book is older than the federal reserve.
+
+'\0' the NULL CHARACTER whose value is zero,
+    to mark the end of the string of characters.
+
+When a string like:
+
+"hello\n"
+
+appears in C, the stored array of characters contains
+
+h   e  l  l  o \n  \0
