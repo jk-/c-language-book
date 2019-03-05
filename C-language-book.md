@@ -141,3 +141,14 @@ NOTE: the program wouldn't print the size of characters because we were stuck in
 We can cope with bigger numbers by using a double and we will use a for loop instead of a while, to illustrate another way to write the loop.
 
 The body of the for loop is empty, because all of the work is done in the test increment parts. Bbut the grammatical rules of C require that a for statement have a body. The isolated semicolon called a NULL STATEMENT, is there to satisfy that requirement.
+
+1.5.3 Line Counting
+
+The next program counts input lines.
+
+>> see count-lines.c
+
+== is the C notation for "is equal to" (like Pascal's singl = or Forta's .EQ.)
+
+A character written between single quotes represents an integer value equal to the numerical value of the character in the machine's character set. This is called
+a character constant, although it is just another way to write a small integer. So, for exmaple 'A' is a chracter constant; in the ASCII character set its value is 65, the internal representation of the character is A.
