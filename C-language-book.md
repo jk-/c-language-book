@@ -455,3 +455,23 @@ Alternative is a recursive solution in which printd first calls itself to cope w
 
 >> see prtind.c
 >> see quicksort.c
+
+4.11 The C Preprocessor
+
+4.11.2 Macro Substitution
+
+#define forever for (;;)
+
+#define max(A, B) ((A) > (B) ? (A): (B))
+
+Expressions are evaluated twice.
+
+Macros are valuable, such as the use of getchar and putchar to avoid the overhead of a function call per character processed.
+
+Names may be undefined with #undef, usually to ensure that a routine is really a function not a macro
+
+#undef getchar
+
+int getchar(void) {}
+
+    
