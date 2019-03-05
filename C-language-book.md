@@ -365,3 +365,11 @@ Enumeration constant:
 enum boolean {NO, YES};
 
 Alternative to define, but the values are determined for you (1,2,..,n)
+
+2.7 Type Conversions
+
+The only automatic conversion of types are those that convert a "narrwer" operand into a
+"wider" one without losing information. Such as converting an int to a float (f + i).
+Expressions that would lose information like assigning a longer int type ot a shorter, or a floating point to an int may draw a warning, but are not illegal.
+
+a Char is just a small int, so chars may be freely used in artimetic. A common use of this in atoi which converts a string of digits into its numeric equivalent.
