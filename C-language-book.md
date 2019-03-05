@@ -152,3 +152,7 @@ The next program counts input lines.
 
 A character written between single quotes represents an integer value equal to the numerical value of the character in the machine's character set. This is called
 a character constant, although it is just another way to write a small integer. So, for exmaple 'A' is a chracter constant; in the ASCII character set its value is 65, the internal representation of the character is A.
+
+1.5.4 Word Counting
+
+>> see count-words.c
