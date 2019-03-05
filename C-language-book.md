@@ -130,4 +130,14 @@ is ====
 
 c = (getchar() != EOF)
 
-This has the undesired effect of setting c to 0 or 1. 
+This has the undesired effect of setting c to 0 or 1.
+
+1.5.2 Character Counting
+
+>> count-char.c
+
+NOTE: the program wouldn't print the size of characters because we were stuck in for loop - see count-char.c for break to print.
+
+We can cope with bigger numbers by using a double and we will use a for loop instead of a while, to illustrate another way to write the loop.
+
+The body of the for loop is empty, because all of the work is done in the test increment parts. Bbut the grammatical rules of C require that a for statement have a body. The isolated semicolon called a NULL STATEMENT, is there to satisfy that requirement.
