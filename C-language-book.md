@@ -373,3 +373,33 @@ The only automatic conversion of types are those that convert a "narrwer" operan
 Expressions that would lose information like assigning a longer int type ot a shorter, or a floating point to an int may draw a warning, but are not illegal.
 
 a Char is just a small int, so chars may be freely used in artimetic. A common use of this in atoi which converts a string of digits into its numeric equivalent.
+
+2.9 Bitwise Operators
+
+&   bitwise AND
+|   bitwise inclusive OR
+^   bitwise exclusive OR
+<<  left shift
+>>  right shift
+~   one's complement unary
+
+&: used to mask off some set of bits:
+
+n = b & 0177;
+
+sets to zero all but the lower-order 7 bits of n.
+
+The bitwise OR operator | is used to turn bits on:
+
+x = x | SET_ON;
+
+sets to one in x the bits that are set to one in SET_ON
+
+The ^ operator sets a one in each bit position where its operands have different bits, and zero where they are the same.
+
+The ~ operator yields the one's complement of an integer.
+It converts each 1-bit into 0-bit and vice versa.
+
+x = x & ~077
+
+sets the last six bits of x to zero. Note that x & ~077 is independent of word length and is thus perferable to x & 0177700, which assumes that x is a 16-bit quantity.
