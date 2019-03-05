@@ -410,3 +410,7 @@ sets the last six bits of x to zero. Note that x & ~077 is independent of word l
 
 static allows scoping of of external variables or functions
 private static variables provide a permanent storage within a single function (they dont fall away like automatic veriables)
+
+4.7 Register Variables
+
+A way to tell the compiler thatt a virable will be used often.
