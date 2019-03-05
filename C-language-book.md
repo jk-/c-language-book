@@ -259,3 +259,25 @@ When a string like:
 appears in C, the stored array of characters contains
 
 h   e  l  l  o \n  \0
+
+1.10 External Variables and Scope
+
+
+Variables in C are referred to as AUTOMATIC variables (exist in local scope).
+
+Alternative to AUTOMATIC variables are "external" to all functions. Because global variables are globally accessible they can be used instead of argument lists to communcate adata between functions.
+
+An external variable must be defined, exactly once, outside any function. this VAR must also be delcared in each function. EXTERN statement
+
+>> see updated char-array.c
+
+in certain scenarios, the extern dec can be omitted. If the def of an external varaible occurs in the source file before its use in the particular function.
+
+The extern dec in main, getline and copy are redundant.
+
+The usual practice is to collect
+extern declarations of variables and functions in a separate file, historically called a header, that is included by #include at the front of each source file.
+
+
+DEFINTION: regers to the place where the variable is created or assigned storage
+DELCARATION: refers to the place where the nature of the variaable is sttaated but no storage is allocated.
