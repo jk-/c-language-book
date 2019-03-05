@@ -414,3 +414,9 @@ private static variables provide a permanent storage within a single function (t
 4.7 Register Variables
 
 A way to tell the compiler thatt a virable will be used often.
+
+4.8 Block Stucture
+
+C is not a block-stuctured language because functions cannot be defined within other functions (aka python).
+
+Variables however, are block structured.
