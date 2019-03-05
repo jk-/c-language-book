@@ -98,4 +98,36 @@ Will contain the next character of input.
 
 putchar(c)
 
-Prints the c ontents of the integer variable c as a chahracter, usually on the screen. Calls to putchar and printf may be interleaved; 
+Prints the c ontents of the integer variable c as a chahracter, usually on the screen. Calls to putchar and printf may be interleaved;
+
+1.5.1 File copying
+
+Given getchar and putchar, you can write a surprising amountn of useful code without knowing anything more input or output.
+
+read and write a character
+>> see file-copy.c
+
+The problem is distinguished the end of the input from valid data. The solution is that getchar returns a distictive value when there is no more input, a value that connot be confused with any real character. This value is called EOF or "end of file". We must declare c to be a type big enough to hold any value thaht getchar returns. We can't use char since c must be big enough to hold EOF in addition to any possible char. Therfore we must use int.
+
+EOF is defined in <stdio.h>, but the specific numeric value doesn't matter as long as it is not the same as any char value.
+
+stdio.h:
+https://fresh2refresh.com/c-programming/c-function/stdio-h-library-functions/
+
+in C, any assignmentt, such as
+
+c = getchar()
+
+is an experssion and has a value, which is the value of the left hand side after the assignment. This means that an assignment can appaer as part of a larger expression. If the assignment of a cahracter to c is put inside the test part of a while loop, the copy program an be written this way.
+
+>> see file-copy.c
+
+The parantheses around the assignment within the condition are neccessary. The precedence of != is higher than tthhat of =, which means that in the absence of parantheses the relational test != would be done before the assignment = . So the statement:
+
+c = getchar() != EOF
+
+is ====
+
+c = (getchar() != EOF)
+
+This has the undesired effect of setting c to 0 or 1. 
