@@ -488,3 +488,36 @@ include a bunch of crap
 #define HDR
 /* contents of hdr.h go here \*/
 #endif
+
+
+CHAPTER 5: POINTERS
+
+&var only applies to objects in memory, variables and array elements. It can not apply to expressions, constants or registter variables.
+
+The unary operator \* operater is the indirection or derefgerencing operator when applied to a pointer it access the obbject pointer points tto.
+
+int x = 1, y = 2, z[10];
+int *ip;    /* ip is a pointer to int */
+
+ip = &x;    /* ip is now the address of X */
+y = *ip;    /* dereferenced ip.. == X */
+*ip = 0;    /* x = 0 */
+ip = &z[0]; /* ip mem address of 0 index z */
+
+Function declarations:
+
+double *dp, atof(char *);
+
+The unary operators * and & bind more tightly than arithmetic.
+
+y = *ip + 1
+
+takes whater ip points at, adds 1 and assigns the result to y while
+
+*ip += 1
+++*ip
+(*ip)++
+
+increments what ip points to
+
+The parenthese are necessary in the last example because without them it would increment ip instead of whatt it points to.
