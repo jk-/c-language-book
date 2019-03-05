@@ -5,8 +5,8 @@ C-Language Book
 Then make sure we understand:
 
     Pointers
+
     Data Structures:
-        Array
         Linked List
         Stack
         Queue

@@ -403,3 +403,10 @@ It converts each 1-bit into 0-bit and vice versa.
 x = x & ~077
 
 sets the last six bits of x to zero. Note that x & ~077 is independent of word length and is thus perferable to x & 0177700, which assumes that x is a 16-bit quantity.
+
+<< SKIPPED A LOT OF KNOWN THINGS >>
+
+4.6 Static Variables
+
+static allows scoping of of external variables or functions
+private static variables provide a permanent storage within a single function (they dont fall away like automatic veriables)

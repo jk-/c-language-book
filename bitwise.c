@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
 
@@ -168,8 +169,11 @@ int main()
     16 8 4 2 1
          1 0 0
     */
-    long char taco = ~0;
+    unsigned char taco = ~0;
+    unsigned char t = 4;
     printf("%u\n", taco);
+    printf("%u\n", ~t);
+    printf("%u\n", ~4);
 }
 
 /* leftshift: shifts all 1-bits LEFT */
