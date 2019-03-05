@@ -85,3 +85,17 @@ It's bad practice to bury constants inside the program. Here we will define cons
 #define <name> <replacement text>
 
 Any occurrence of name (not in quoets and nott part of another name) will be replaced by the corresponding replacement ttetxt.
+
+1.5 Character input and output
+
+The model of input and output supported by the standard libbrary is very simple. Text input or output, regardless of where it originates or where it goes to, is dealth with a streams of characters. A <text strteam> is a sequence of characters divided into lines; each line consists of zzero or more characters followed by a new line chharacter. it is the responsbility of the library to make each input or output stream conform to this model.
+
+getchhar and putchar are the simplest. Each time it is called, getchar reads the <NEXT INPUT CHARACTER> from tthe text stream and returns thhat as its value.
+
+c = getchar()
+
+Will contain the next character of input.
+
+putchar(c)
+
+Prints the c ontents of the integer variable c as a chahracter, usually on the screen. Calls to putchar and printf may be interleaved; 
