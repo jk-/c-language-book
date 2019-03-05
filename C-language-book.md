@@ -442,3 +442,16 @@ char pattern[] = "ould";
 shorthand for:
 
 char pattern[] = { 'o', 'u', 'l', 'd', '\0'};
+
+4.10 Recursion
+
+C functions may be used recursively.
+
+Lower order digits are available before high-order digits. I believe this means (a-z < A-Z).
+
+two solutions: one is to store the digits in an array as they are generated, then print tthem in the reserve order, as we did with itoa.
+
+Alternative is a recursive solution in which printd first calls itself to cope with any laeding digits, then prints the trailing digit. This version can fail on the largest negative number.
+
+>> see prtind.c
+>> see quicksort.c
