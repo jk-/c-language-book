@@ -474,4 +474,17 @@ Names may be undefined with #undef, usually to ensure that a routine is really a
 
 int getchar(void) {}
 
-    
+4.11.3 Conditional Inclusion
+
+Its possible to control preprocessing itself with conditional statements that are evaluated during preprocessing. This provides a way to include code selectively.
+
+The #if line evals a constant integer expression. If the expression is non-zero subsequent lines are included.
+
+#if SJW_SUCKS
+include a bunch of crap
+#endif
+
+#if !defined(HDR)
+#define HDR
+/* contents of hdr.h go here \*/
+#endif
