@@ -598,7 +598,6 @@ char *pmessage = "now is the time";
 
 Primarily the example of pointer arrays solves the problem of the twin problems of complicated storage management.
 
-
 >> see pointer-array.c
 
 5.7 Multi-dimensional Arrays
@@ -606,3 +605,7 @@ Primarily the example of pointer arrays solves the problem of the twin problems 
 >> see leap-year.c
 
 5.10 Pointers to Functions
+
+6.0 Structures
+
+>> see structure-point.c
