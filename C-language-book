@@ -521,3 +521,23 @@ takes whater ip points at, adds 1 and assigns the result to y while
 increments what ip points to
 
 The parenthese are necessary in the last example because without them it would increment ip instead of whatt it points to.
+
+5.2 Pointers and Function Arguments
+
+swap(a, b);     /* wrong, will pass by value */
+
+swap(&a, &b);   /* pass the memory address */
+
+void swap(int *px, int *py)
+{
+    int temp;
+
+    temp = *py;
+    *px = *py;
+    *py = temp;
+}
+
+int n, array[SIZE], getint(int *);
+
+for (n =0; n < SIZE && getint(&array[n]) != EOF; n++)
+    ;
