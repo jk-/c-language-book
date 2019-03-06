@@ -621,3 +621,24 @@ Three possible approaches to manipulating structures:
 3. pass a pointer to it
 
 The first function <makepoint> will take two intgers and return a point structure.
+
+If a large structure is to be passed ot a function, it is rgenerally more effecient ot pass a point than to copy the whole structure.
+
+The notation for . and -> and structures have precedence and thus bind very tightly. For example:
+
+struct {
+    int len;
+    char *str;
+} *p;
+
+++p->len
+
+Will increment len and not P because of the binding order.
+
+++(p->len) is equivelent
+
+*p->str fetches whatever str points to.
+
+*(p->str)
+
+*p++->str will increment p AFTER accessing whatever str points to
