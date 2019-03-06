@@ -588,3 +588,8 @@ This is a last in, first out listt.
 analogous functions called malloc and free.
 
 The estiest implementation is to have alloc hand out pieces of a large character arrayt that will call allocbuf.
+
+5.5 Character Pointers and Functions
+
+char amessage[] = "nowisthetime";
+char *pmessage = "now is the time";
