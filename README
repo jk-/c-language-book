@@ -18,7 +18,8 @@ Then make sure we understand:
         [x] Hashing
         Graph
         Matrix
-        Unions
+        [x] Unions
+        Bit-fields
 
 
 Additional Learning:
