@@ -600,3 +600,7 @@ Primarily the example of pointer arrays solves the problem of the twin problems 
 
 
 >> see pointer-array.c
+
+5.7 Multi-dimensional Arrays
+
+>> see leap-year.c
