@@ -642,3 +642,63 @@ Will increment len and not P because of the binding order.
 *(p->str)
 
 *p++->str will increment p AFTER accessing whatever str points to
+
+6.3 Arrays of Structures
+
+Write a program that counts the occurences of each C keyword. We need an array of character strings to hold the names, and an array of integers for the counts.
+
+char *keyword[NKEYS];
+int keycount[NKEYS];
+
+char *word;
+int count;
+
+struct key {
+    char *word;
+    int count;
+} keytab[NKEYS];
+
+struct key {
+    char *word;
+    int count;
+};
+
+struct key keytab[NKEYS];
+
+Since the structure keytab contains a constant set of names (words), it is easiest to make it an external variable and initialize it once and for all.
+
+struct key {
+    char *word;
+    int count;
+} keytab[] = {
+    "auto", 0,
+    "break", 0,
+    "aword", 0,
+    "another", 0,
+    "word", 0,
+    "here", 0
+};
+
+The inner braces are not necessary when the initializers are simple variables or character strings.
+
+>> see structures-array.c
+
+C provides a compile-timne unary operator called sizeof that can be used to compute the size of any object.
+
+sizeof object
+
+and
+
+sizeof(type name)
+
+yield an integer equal to the size of the specific object or type in bytes.
+
+sizeof produces an unsigned integer value whose type, size_t is defined in stddef.h
+
+>> see NKEYS def
+
+sizeof CAN NOT be used in an #if line, because the preprocessor does not parse type names.
+
+because the expression in #define is not evaluted by the preprocess, so the code is legel.
+
+>> see getword
