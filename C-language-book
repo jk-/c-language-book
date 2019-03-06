@@ -593,3 +593,10 @@ The estiest implementation is to have alloc hand out pieces of a large character
 
 char amessage[] = "nowisthetime";
 char *pmessage = "now is the time";
+
+5.6 Pointer arrays; Pointers to Pointers
+
+Primarily the example of pointer arrays solves the problem of the twin problems of complicated storage management.
+
+
+>> see pointer-array.c
