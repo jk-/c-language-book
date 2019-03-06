@@ -604,3 +604,5 @@ Primarily the example of pointer arrays solves the problem of the twin problems 
 5.7 Multi-dimensional Arrays
 
 >> see leap-year.c
+
+5.10 Pointers to Functions
