@@ -823,3 +823,52 @@ Two primary reasons:
 
 1. To parameterize a program against portability problems.
 2. better documentation for a program
+
+6.8 Unions
+
+A union is a variable that may hold (at different times) objects of different types and sizes, with theh compile keeping track of the size and alignment requirements. unions provide a way to manipulate different kinds of data in a single area of storage, without embedding any machine-dependent information in the program. Theyt are analogous to variant records in Pascal.
+
+union u_tag {
+    int ival;
+    float fval;
+    char *sval;
+} u;
+
+The varaible u will be large enough to hold theh largest of the three types; the specific size is implementation-dependent. Anyone of these types may be assigned to u and then used in expressions, so long as the usage is consistent:
+
+It is the programmers reponsibility to keep track of which type is currently stored in a union; the results are imp depend if something is stored as one type and extracted as another.
+
+<union-name>.member
+or
+<union-pointer>->member
+
+Dot or -> syntax.
+
+if (utype == INT)
+    printf(...d)
+else if (utype == FLOAT)
+    printf(...f)
+else
+    ..bad type
+
+unions may occur within structures and arrays, and vice versa.
+
+struct {
+    char *name;
+    int flags;
+    int utype;
+    union {
+        int ival;
+        float fval;
+        char *sval;
+    } u;
+} symtab[NSYM];
+
+ival is accessed by:
+
+*symtab[i].u.sval;
+symtab[i].u/sval[0]
+
+The structure is big enough to hold the widest member.
+
+A union may only be intialized with a value of the type of its first member, thus the union U described above can only be initialized with an integer value.
