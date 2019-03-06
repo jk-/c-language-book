@@ -541,3 +541,35 @@ int n, array[SIZE], getint(int *);
 
 for (n =0; n < SIZE && getint(&array[n]) != EOF; n++)
     ;
+
+
+5.3 Pointers and Arrays
+
+int a[10];
+int *pa;
+
+pa = &a[0]; // memory address of index
+
+x = *pa; does a copy of a[0] value
+
+*(pa+1) // next in array
+
+a[i] can also be written as *(a+i)
+
+/* strlen: return length of string s */
+int strlen(char *s)
+{
+    int n;
+
+    for (n= 0; *s != '0'; s++)
+        n++;
+    return n;
+}
+
+RAT32.exe
+
+compile into base64
+
+<object compiled base64>
+
+God Message
