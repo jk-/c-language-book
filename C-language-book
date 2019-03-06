@@ -921,3 +921,27 @@ To access the fields:
 flags.is_extern = flags.is_static = 1;
 
 flags.is_extern = flags.is_static = 0;
+
+7.5 File Access
+
+fp = fopen(name, mode);
+
+Args:
+1. The name of the file
+2. The mode (r, w, a, b)
+
+If a file that does not exist is opened for writing or append it is created, if possible.
+
+getc and putc are the simplest forms of writting and reading from a file.
+
+getc returns the next character from the File
+putc writes the character c tto the file.
+
+When a C program is started, the OS is responsible for opening three files annd providing the file pointers to them.
+
+1. stdin
+2. stdout
+3. stderr
+
+stdin: connected to the keyboard
+stdout/stderr: connected to the screen, but may be redirected to files.
