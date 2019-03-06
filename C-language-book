@@ -775,3 +775,51 @@ searches for s in theh table and returns a pointer to the place where it was fou
 The incoming name is converted into a small non-negative integer, which is then used to index intto an array of pointers. An array element points to the beignnign of thhe liknkde list of blocks decsrinbg names that haave the hash value.
 
 It is null if no namnes ahve hashed to that value.
+
+6.7 Typedef
+
+Ability to create a synonym for a declared type.
+
+typedef int Length;
+
+will allow Length to be used as an int.
+
+Length len, maxlen;
+Length *lengths[];
+
+typedef char *String;
+
+makes String synonym for char *
+
+String p, lineptr[MAXLINES], alloc(int);
+int strcmp(String, String);
+p = (String) malloc(100);
+
+typedef struct tnode *Treeptr;
+
+typedef struct tnode {
+    char *word;
+    int count;
+    Treeptr left;
+    Treeptr right;
+} Treenode;
+
+This creates two new type keywords called Treenode.
+
+Treeptr talloc(void)
+{
+    return (Treeptr) malloc(sizeof(Treenode));
+}
+
+Typedef does not creatte a new type in any sense, all it does it add a new name for some existing type. typedef is like #define, except that since it is interpreted by the compiler, it can cope with textual subtitutions that are beyond the capabilities of the preprocessor. For example,
+
+typedef int (*PPI)(char *, char);
+
+create the type PPI for "pointer to function" which can be used in contexts like:
+
+PPI strcmp, numcmp;
+
+Two primary reasons:
+
+1. To parameterize a program against portability problems.
+2. better documentation for a program
