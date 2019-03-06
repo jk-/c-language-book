@@ -4,7 +4,9 @@ C-Language Book
 
 Then make sure we understand:
 
-    Pointers
+    Pointers:
+        look up pointer addition and subtraction
+        look up why a struct of char and int could require 8-bytes instead of assumed five.
 
     Data Structures:
         Linked List

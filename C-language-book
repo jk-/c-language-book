@@ -702,3 +702,28 @@ sizeof CAN NOT be used in an #if line, because the preprocessor does not parse t
 because the expression in #define is not evaluted by the preprocess, so the code is legel.
 
 >> see getword
+
+6.4 Pointers to Structures
+
+We will update stuctures-arrays to use pointers.
+
+>> see structures-array-pointers.c
+
+The addition of two pointers is ILLEGAL.
+Subtraction is legal so high-low is the number of elements, and thus
+
+mid = low + (high-low) / 2
+
+sets the mid to point to the element halway between low and high
+
+ alignment requirements for different objects, there may be unnamed "holes" in a structure.
+
+ for example if a char requires 1 byte and int requites 4 the struct
+
+ struct {
+    char c; /* assumed 1 byte */
+    int i;  /* assumed 4 bytes */
+ }
+
+ might well require eight bytes, not five.
+sizeof handles the correct size.
