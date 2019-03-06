@@ -609,3 +609,15 @@ Primarily the example of pointer arrays solves the problem of the twin problems 
 6.0 Structures
 
 >> see structure-point.c
+
+6.2 Structures and Functions
+
+Structures may not be compared
+
+Three possible approaches to manipulating structures:
+
+1. Pass components seperately
+2. pass an entire structure
+3. pass a pointer to it
+
+The first function <makepoint> will take two intgers and return a point structure.
