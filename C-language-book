@@ -573,3 +573,18 @@ compile into base64
 <object compiled base64>
 
 God Message
+
+
+5.4 Address Arithmetic
+
+Storage allocattor:
+Two routines. the first <ALLOC(n)> returns a pointer
+p to n-consecutive character positions, which can be uised by the caller of alloc for tsoring characters. The second, afree(p) which releases the storage thus aquired so it can be re-used later.
+
+The routines are rudimentary because the calls afree must be made in the opposite order to calls made on alloc.
+
+This is a last in, first out listt.
+
+analogous functions called malloc and free.
+
+The estiest implementation is to have alloc hand out pieces of a large character arrayt that will call allocbuf.
