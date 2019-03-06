@@ -945,3 +945,13 @@ When a C program is started, the OS is responsible for opening three files annd 
 
 stdin: connected to the keyboard
 stdout/stderr: connected to the screen, but may be redirected to files.
+
+7.6 Error Handling - Stderr and Exit
+
+fprintf(stderr, "format here", vars here);
+
+exit(0) is used to terminate the program when it is called;
+
+Within main return expr is equiv to exit(expr)
+
+exit has the advantage that it can be called from other functions.
