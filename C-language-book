@@ -763,3 +763,15 @@ See page 142 for low level alignment and memory allocation.
 Alloc does not gurantee particular alignment, but malloc does.
 
 malloc is defined in stdlib.h
+
+6.6 Table Lookup - Hash Search
+
+install(s ,t):
+records the name s and the replace text t in the table. S and T are just character strings.
+
+lookup(s):
+searches for s in theh table and returns a pointer to the place where it was found, or NULL if not.
+
+The incoming name is converted into a small non-negative integer, which is then used to index intto an array of pointers. An array element points to the beignnign of thhe liknkde list of blocks decsrinbg names that haave the hash value.
+
+It is null if no namnes ahve hashed to that value.

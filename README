@@ -9,13 +9,13 @@ Then make sure we understand:
         look up why a struct of char and int could require 8-bytes instead of assumed five.
 
     Data Structures:
-        Linked List
+        [x] Linked List
         Stack
         Queue
         [x] Binary Tree
         [x] Binary Search Tree
         Heap
-        Hashing
+        [x] Hashing
         Graph
         Matrix
 
